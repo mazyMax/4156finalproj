@@ -14,6 +14,7 @@ gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
 gem 'stock_quote', '~> 3.0'
 gem 'devise', '~> 4.7', '>= 4.7.3'
+gem 'acts_as_votable', '~> 0.13.1'
 
 
 # Use Unicorn as the app server
