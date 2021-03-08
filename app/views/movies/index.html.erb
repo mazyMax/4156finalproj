@@ -13,6 +13,8 @@
     </tr>
   </thead>
   <tbody>
+      
+      
     <% @movies.each do |movie| %>
       <tr>
         <td>
@@ -27,6 +29,23 @@
         <td>
           <%= link_to "More about #{movie.title}", movie_path(movie) %>
         </td>
+        <td>
+            <%= link_to like_movie_path(movie), method: :put do %>
+            Like
+           <%= movie.get_upvotes.size%>
+            <% end %>
+        </td>
+        <td>
+            <%= link_to unlike_movie_path(movie), method: :put do %>
+            Unlike
+           <%= movie.get_downvotes.size%>
+            <% end %>
+        </td>
+        <td>
+            Percentage:
+          <%= movie.get_upvotes.size.to_f/movie.weighted_total %>
+        </td>
+       
       </tr>
     <% end %>
   </tbody>

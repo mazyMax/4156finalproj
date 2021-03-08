@@ -18,7 +18,12 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 
-  resources :movies
+  resources :movies do
+      member do
+          put "like" => "movies#upvote"
+          put "unlike" => "movies#downvote"
+      end
+  end
   
   # Example resource route with options:
   #   resources :products do
