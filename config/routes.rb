@@ -24,6 +24,8 @@ Rails.application.routes.draw do
           put "unlike" => "movies#downvote"
       end
   end
+    
+  resources :users, only: [:show, :edit, :update]
   
   # Example resource route with options:
   #   resources :products do
