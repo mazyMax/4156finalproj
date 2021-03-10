@@ -26,6 +26,7 @@ Rails.application.routes.draw do
   end
     
   resources :users, only: [:show, :edit, :update]
+  resources :posts, only: [:new, :create]
   
   # Example resource route with options:
   #   resources :products do

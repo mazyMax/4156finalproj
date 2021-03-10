@@ -11,3 +11,18 @@
   <%= submit_tag 'Save Changes', :class => 'btn btn-primary' %>
   <%= link_to 'Cancel', movies_path, :class => 'btn btn-secondary' %>
 <% end %>
+
+<br>
+
+<%= form_for Post.new do |f| %>
+  <div class="form-group">
+    <%= f.text_field :description %>
+  </div>
+  <div class="form-group">
+    <%= f.file_field :image %>
+  </div>
+  <br>
+  <div class="text-center">
+    <%= f.submit 'Create Vote', class: 'btn btn-primary' %>
+  </div>
+<% end %>

@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   acts_as_voter
+    has_many :votes, dependent: :destroy
+    has_many :posts, dependent: :destroy
+    
 end
