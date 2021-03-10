@@ -28,18 +28,30 @@
 <div class="user-images">
   <div class="wrapper">
     <%= image_tag ("chiken.jpg") %>
+      <%= link_to like_movie_path(@movie), method: :put do %>
+            Like
+           <%= @movie.get_upvotes.size%>
+            <% end %>
       <div>
       <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
        </div>
   </div>
   <div class="wrapper">
     <%= image_tag ("pizza.jpg") %>
+       <%= link_to like_movie_path(@movie), method: :put do %>
+            Like
+           <%= @movie.get_upvotes.size%>
+            <% end %>
       <div>
   <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
         </div>
   </div>
   <div class="wrapper">
-    <%= image_tag ("steak.jpg") %>
+    <%= image_tag ("steak2.jpg") %>
+      <%= link_to like_movie_path(@movie), method: :put do %>
+            Like
+           <%= @movie.get_upvotes.size%>
+            <% end %>
       <div>
   <input class="form-check-input" type="radio" name="radioNoLabel" id="radioNoLabel1" value="" aria-label="...">
         </div>
